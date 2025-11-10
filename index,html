@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Spirunature — Pure Spirulina. Pure Health.</title>
+  <meta name="description" content="Spirunature — premium spirulina to boost health. Sustainably cultivated, lab-tested, and fresh." />
+  <meta name="theme-color" content="#042026" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      /* Palette: black + green-blue */
+      --bg:#040606;
+      --panel:#07121a;
+      --muted:#9fb6b0;
+      --accent1:#00b894; /* bright green */
+      --accent2:#0ea5a3; /* green-blue */
+      --glass: rgba(255,255,255,0.03);
+      --radius:14px;
+      --txt:#e8f8f5;
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;background:linear-gradient(180deg,var(--bg) 0%, #031019 100%);color:var(--txt);-webkit-tap-highlight-color:transparent}
+    a{color:inherit}
+    .container{max-width:1150px;margin:0 auto;padding:28px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .brand{display:flex;align-items:center;gap:14px}
+    .logo-wrap{display:flex;align-items:center;gap:10px}
+    .logo-badge{width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--accent2),var(--accent1));box-shadow:0 6px 20px rgba(0,184,148,0.12);font-weight:800;color:#042026}
+    .brand h1{margin:0;font-size:18px;letter-spacing:0.2px}
+    .brand p{margin:0;font-size:12px;color:var(--muted)}
+    nav{display:flex;gap:14px;align-items:center}
+    nav a{color:var(--muted);text-decoration:none;font-weight:600;font-size:14px}
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:32px;align-items:center;margin-top:28px}
+    .hero h2{font-size:36px;line-height:1.02;margin:0 0 12px}
+    .hero p{color:var(--muted);margin:0 0 18px}
+    .cta-row{display:flex;gap:12px;flex-wrap:wrap}
+    .btn{
+      background:linear-gradient(90deg,var(--accent1),var(--accent2));border:0;padding:12px 18px;border-radius:12px;color:#042026;font-weight:800;cursor:pointer;font-size:14px;
+      box-shadow:0 10px 30px rgba(0,184,148,0.12);
+    }
+    .btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
+    .card{background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));padding:18px;border-radius:16px;box-shadow:0 10px 30px rgba(2,6,12,0.6)}
+    .mock{
+      height:360px;border-radius:12px;background:linear-gradient(180deg,#05222a 0%,#062b37 100%);display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:14px
+    }
+    .features{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:26px}
+    .feature{background:var(--glass);padding:16px;border-radius:12px;color:var(--muted)}
+    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    .badge{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(0,0,0,0.22);font-weight:700;font-size:13px;color:var(--muted)}
+    /* Product section */
+    .product{display:grid;grid-template-columns:1fr 420px;gap:26px;align-items:center;margin-top:34px}
+    .benefits{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:12px}
+    .benefit{padding:12px;border-radius:10px;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);border:1px solid rgba(255,255,255,0.02)}
+    /* App / store badges */
+    .app-card{display:flex;gap:12px;align-items:center;padding:12px;border-radius:12px;background:linear-gradient(180deg,rgba(255,255,255,0.01),transparent)}
+    .store-btn{padding:8px 12px;border-radius:8px;background:rgba(255,255,255,0.03);font-weight:700;font-size:13px}
+    /* Contact */
+    form{margin-top:12px}
+    input,textarea{width:100%;padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:var(--txt);font-size:14px}
+    .row{display:flex;gap:10px}
+    footer{margin-top:40px;padding:22px 0;color:var(--muted);display:flex;justify-content:space-between;align-items:center}
+    small{color:var(--muted)}
+    @media (max-width:980px){
+      .hero,.product{grid-template-columns:1fr;gap:18px}
+      .features{grid-template-columns:1fr}
+      .benefits{grid-template-columns:1fr}
+      .mock{height:260px}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo-wrap">
+          <div class="logo-badge" aria-hidden="true">
+            <!-- Simple Spirunature badge (SVG inline) -->
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M12 2C8 2 4 4 2 8c2 4 6 6 10 6s8-2 10-6c-2-4-6-6-10-6z" fill="#042026" opacity="0.06"/>
+              <path d="M8 16c1.5 2 3.5 3 6 3 2.5 0 4.5-1 6-3-2-3-6-4-9-4s-7 1-9 4z" fill="#042026" opacity="0.08"/>
+              <path d="M12 6c-2.8 0-5 2.2-5 5s2.2 5 5 5 5-2.2 5-5-2.2-5-5-5z" fill="#042026"/>
+            </svg>
+          </div>
+          <div>
+            <h1>Spirunature</h1>
+            <p>Pure Spirulina. Pure Health.</p>
+          </div>
+        </div>
+      </div>
+
+      <nav aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#benefits">Benefits</a>
+        <a href="#product">Product</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div>
+          <div class="badge">Sustainably cultivated • Lab-tested</div>
+          <h2 id="hero-title">Nature’s most nutrient-dense micro-algae — premium spirulina, grown with care.</h2>
+          <p>Spirunature provides high-quality spirulina powder and tablets that support immunity, energy, and overall wellness. Farmed responsibly and tested for purity.</p>
+
+          <div class="cta-row" style="margin-top:14px;">
+            <button class="btn" id="mainAction">All</button>
+            <button class="btn ghost" onclick="document.getElementById('product').scrollIntoView({behavior:'smooth'})">Order Spirulina</button>
+            <button class="btn ghost" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Contact Us</button>
+          </div>
+
+          <div class="card" style="margin-top:18px;">
+            <strong style="display:block;margin-bottom:8px">Why choose Spirunature?</strong>
+            <div style="color:var(--muted)">Fresh harvests, third-party tested for heavy metals, and packed at source to preserve nutrients.</div>
+          </div>
+
+          <div class="features" aria-label="Key site features" style="margin-top:18px;">
+            <div class="feature"><strong>High Potency</strong><div style="margin-top:8px;font-size:13px">Concentrated nutrients per serving.</div></div>
+            <div class="feature"><strong>Sustainable</strong><div style="margin-top:8px;font-size:13px">Low water footprint & regenerative practices.</div></div>
+            <div class="feature"><strong>Lab-tested</strong><div style="margin-top:8px;font-size:13px">Third-party purity & safety reports.</div></div>
+          </div>
+        </div>
+
+        <aside>
+          <div class="card mock" aria-hidden="true">
+            <div style="text-align:center">
+              <img src="data:image/svg+xml;utf8,
+                <svg xmlns='http://www.w3.org/2000/svg' width='320' height='220'>
+                  <rect width='100%' height='100%' fill='%23032629'/>
+                  <text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' fill='%239fb6b0' font-family='Arial' font-size='14'>Product image / Jar mockup</text>
+                </svg>" alt="product" style="max-width:100%;border-radius:8px;"/>
+              <div style="margin-top:12px;color:var(--muted);font-size:13px">100% pure spirulina • 150g jar</div>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section id="about" style="margin-top:32px;">
+        <div class="card">
+          <h3 style="margin:0 0 8px">About Spirunature</h3>
+          <p style="margin:0;color:var(--muted)">We cultivate spirulina in controlled ponds with natural sunlight and nutrient-balanced water. Our process focuses on purity, sustainability, and nutrient retention so you get the highest-quality spirulina every batch.</p>
+
+          <div class="grid-2" style="margin-top:12px;">
+            <div style="padding-right:8px">
+              <h4 style="margin:0 0 6px">How it’s grown</h4>
+              <p style="margin:0;color:var(--muted);font-size:14px">Careful water management, solar-powered pumps, and closed processing — minimizing contamination risks and preserving nutrients.</p>
+            </div>
+            <div style="padding-left:8px">
+              <h4 style="margin:0 0 6px">Quality & testing</h4>
+              <p style="margin:0;color:var(--muted);font-size:14px">Every lot is lab-tested for purity, heavy metals, and microbial safety. Certificates of analysis available on request.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="benefits" style="margin-top:26px;">
+        <h3 style="margin:0 0 12px">Health Benefits</h3>
+        <div class="benefits">
+          <div class="benefit"><strong>Rich in Protein & Amino Acids</strong><div style="font-size:13px;color:var(--muted);margin-top:6px">A complete source of plant-based protein.</div></div>
+          <div class="benefit"><strong>Supports Immunity</strong><div style="font-size:13px;color:var(--muted);margin-top:6px">Packed with vitamins and antioxidants.</div></div>
+          <div class="benefit"><strong>Boosts Energy</strong><div style="font-size:13px;color:var(--muted);margin-top:6px">Natural nutrients that help sustain energy levels.</div></div>
+          <div class="benefit"><strong>Detox Support</strong><div style="font-size:13px;color:var(--muted);margin-top:6px">May support healthy detoxification processes.</div></div>
+        </div>
+      </section>
+
+      <section id="product" class="product" style="margin-top:28px;">
+        <div>
+          <h3 style="margin:0 0 8px">Our Product</h3>
+          <p style="margin:0;color:var(--muted)">Available as powder and tablets. Each jar contains 150g of spirulina powder (serving suggestion: 1 tsp daily).</p>
+
+          <div style="margin-top:12px" class="card">
+            <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+              <div>
+                <div style="font-weight:800;font-size:18px">Spirunature • 150g jar</div>
+                <div style="color:var(--muted);margin-top:6px">Price: $19.99 • Free shipping over $49</div>
+              </div>
+              <div style="display:flex;gap:10px">
+                <button class="btn" onclick="onBuyClick()">Order Now</button>
+                <button class="btn ghost" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Request COA</button>
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-top:14px">
+            <h4 style="margin:0 0 8px">Nutrition per serving</h4>
+            <ul style="margin:0;color:var(--muted);font-size:14px">
+              <li>Protein: 4g</li>
+              <li>Iron: 2mg</li>
+              <li>Vitamin B12 (plant source): trace amounts</li>
+            </ul>
+          </div>
+        </div>
+
+        <aside>
+          <div class="card app-card">
+            <div style="flex:1">
+              <strong>Spirunature App</strong>
+              <div style="color:var(--muted);font-size:13px;margin-top:6px">Track orders, read dosage guides, and view certificates.</div>
+              <div style="margin-top:10px;display:flex;gap:8px">
+                <div class="store-btn">App Store (coming)</div>
+                <div class="store-btn">Google Play (coming)</div>
+              </div>
+            </div>
+          </div>
+
+          <div style="height:12px"></div>
+          <div class="card" style="text-align:center">
+            <strong style="display:block;margin-bottom:8px">Satisfaction Guarantee</strong>
+            <div style="color:var(--muted);font-size:13px">30-day money-back guarantee on unopened jars.</div>
+          </div>
+        </aside>
+      </section>
+
+      <section id="contact" style="margin-top:28px;">
+        <div class="card">
+          <h3 style="margin:0 0 8px">Contact / Order</h3>
+          <p style="margin:0 0 10px;color:var(--muted)">Have questions or want to place a bulk order? Message us and we’ll respond within 1 business day.</p>
+
+          <form action="https://formspree.io/f/your-form-id" method="POST" onsubmit="onContactSubmit(event)">
+            <div class="row" style="margin-bottom:10px">
+              <input type="text" name="name" placeholder="Full name" required />
+              <input type="email" name="email" placeholder="Email" required />
+            </div>
+            <div style="margin-bottom:10px">
+              <input type="text" name="subject" placeholder="Subject (order / question)" />
+            </div>
+            <div style="margin-bottom:10px">
+              <textarea name="message" rows="4" placeholder="Your message" required></textarea>
+            </div>
+            <div style="display:flex;gap:10px;align-items:center">
+              <button class="btn" type="submit">Send message</button>
+              <div id="formStatus" style="color:var(--muted);font-size:13px"></div>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <small>© <span id="year"></span> Spirunature • All rights reserved</small>
+      <div style="display:flex;gap:12px;align-items:center">
+        <a href="#" style="color:var(--muted);text-decoration:none">Privacy</a>
+        <a href="#" style="color:var(--muted);text-decoration:none">Terms</a>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Primary action: user requested main button text "All"
+    document.getElementById('mainAction').addEventListener('click', function(){
+      // "All" could show everything — here we scroll to product as default
+      document.getElementById('product').scrollIntoView({behavior:'smooth'});
+    });
+
+    function onBuyClick(){
+      // Example: open checkout placeholder or show contact form
+      alert('Thank you — we will redirect you to ordering. (This is a placeholder.)');
+      // In future we can integrate Stripe checkout here.
+    }
+
+    function onContactSubmit(e){
+      // Tiny UX feedback for Formspree or other endpoint
+      const status = document.getElementById('formStatus');
+      status.textContent = 'Sending…';
+      // Let native submission happen; update UI after short delay
+      setTimeout(()=> status.textContent = 'Message sent — thank you!',1200);
+    }
+  </script>
+</body>
+</html>
